@@ -13,7 +13,7 @@ function buscarEstoque() {
     .catch(error => {
       console.error("Erro na busca:", error);
       const resultadoDiv = document.getElementById("resultado");
-      resultadoDiv.innerHTML = "Erro ao buscar estoque";
+      resultadoDiv.innerHTML = "Erro ao buscar estoque!";
     });
   }
   
@@ -32,6 +32,6 @@ function buscarEstoque() {
     .catch(error => {
       console.error("Erro na busca:", error);
       const resultadoDiv = document.getElementById("resultado");
-      resultadoDiv.innerHTML = "Erro ao buscar estoque";
+      resultadoDiv.innerHTML = "Erro ao buscar estoque!";
     });
   }

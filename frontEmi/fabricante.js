@@ -28,7 +28,7 @@ gravar.addEventListener('click', ()=>{
         res.innerHTML = "Fabricante cadastrado com sucesso! <br><br>"
         res.innerHTML += "Código do Funcionário: " +  dados.codFuncionario + "<br>"
         res.innerHTML += "Nome do Fabricante: " +  dados.nomeFabricante + "<br>"
-        res.innerHTML += "Código fabricante: " + dados.codFabricante + "<br>"
+        res.innerHTML += "Código Fabricante: " + dados.codFabricante + "<br>"
     })
     .catch((err) => console.error("Erro ao tentar cadastrar o fabricante!", err))
 
@@ -61,7 +61,7 @@ buscar.addEventListener('click', ()=>{
     .then(dado => {
         res.innerHTML += "Código: " + dado.codFabricante + "<br>" + "Nome: " + dado.nomeFabricante + "<br>" 
     })
-    .catch((err) => console.error("Falha ao tentar encontrar o fabricante!", err))
+    .catch((err) => console.error("Falha ao tentar encontrar o Fabricante!", err))
     
     document.getElementById('meu-formulario').reset()
 });

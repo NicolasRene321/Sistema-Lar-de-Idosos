@@ -8,15 +8,15 @@ let listar = document.getElementById('listar')
 // gravar-----------------------------------------------------
 
 gravar.addEventListener('click', ()=>{
-    let nomeProduto = document.getElementById('nomeProduto').value
-    let quantidadeProduto = Number(document.getElementById('quantidadeProduto').value)
-    let valorProduto = Number(document.getElementById('valorProduto').value)
-    let descricaoProduto = document.getElementById('descricaoProduto').value
-    let validadeProduto = document.getElementById('validadeProduto').value
-    let doadorId = Number(document.getElementById('doadorId').value)
-    let estoqueId = Number(document.getElementById('estoqueId').value)
-    let fabricanteId = Number(document.getElementById('fabricanteId').value)
-    let funcionarioId = Number(document.getElementById('funcionarioId').value)
+    const nomeProduto = document.getElementById('nomeProduto').value
+    const quantidadeProduto = Number(document.getElementById('quantidadeProduto').value)
+    const valorProduto = Number(document.getElementById('valorProduto').value)
+    const descricaoProduto = document.getElementById('descricaoProduto').value
+    const validadeProduto = document.getElementById('validadeProduto').value
+    const doadorId = Number(document.getElementById('doadorId').value)
+    const estoqueId = Number(document.getElementById('estoqueId').value)
+    const fabricanteId = Number(document.getElementById('fabricanteId').value)
+    const funcionarioId = Number(document.getElementById('funcionarioId').value)
     
     const dados = {
     
@@ -25,7 +25,7 @@ gravar.addEventListener('click', ()=>{
         descricaoProduto: descricaoProduto,
         validadeProduto: validadeProduto,
         doadorId: doadorId,
-        estoqueId, estoqueId,
+        estoqueId:estoqueId,
         fabricanteId: fabricanteId,
         funcionarioId: funcionarioId,
         valorProduto: valorProduto
@@ -62,7 +62,7 @@ listar.addEventListener('click', () => {
         .then(dados => {
             res.innerHTML = "";
             dados.forEach(dado => {
-                res.innerHTML = "Código: " + dado.codProduto + "<br>"
+                res.innerHTML += "Código: " + dado.codProduto + "<br>"
                  + "Nome: " +  dado.nomeProduto + "<br>"
                  + "Quantidade: " +  dado.quantidadeProduto + "<br>"
                  + "Descrição: " +  dado.descricaoProduto + "<br>"
@@ -73,8 +73,10 @@ listar.addEventListener('click', () => {
                  + "Fabricante ID: " +  dado.fabricanteId + "<br>"
                  + "Funcionário ID: " +  dado.funcionarioId + "<br>"});
         })
-        .catch((err) => console.error("Falha ao listar todos os produtos", err));
+        .catch((err) => console.error("Falha ao listar todos os produtos!", err));
 
     document.getElementById('meu-formulario3').reset()
 });
+
+
 

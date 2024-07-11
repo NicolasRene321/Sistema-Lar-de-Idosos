@@ -34,11 +34,11 @@ gravar.addEventListener('click', ()=>{
     .then(resposta => resposta.json())
     .then(dados => {
         res.innerHTML = "Entrega feita com sucesso! <br><br>"
-        res.innerHTML += "Código Entrega: " + dados.codEntrega + "<br>"
-        res.innerHTML += "Data entrega: " +  dados.dataEntrega + "<br>"
+        res.innerHTML += "Código da entrega: " + dados.codEntrega + "<br>"
+        res.innerHTML += "Data da entrega: " +  dados.dataEntrega + "<br>"
         res.innerHTML += "Nome do produto: " +  dados.nomeProdutoEntrega + "<br>"
-        res.innerHTML += "Quantidade entrega: " +  dados.quantidadeEntrega + "<br>"
-        res.innerHTML += "Responsavel pela entrega: " +  dados.responsavelEntrega + "<br>"
+        res.innerHTML += "Quantidade da entrega: " +  dados.quantidadeEntrega + "<br>"
+        res.innerHTML += "Responsável pela entrega: " +  dados.responsavelEntrega + "<br>"
         res.innerHTML += "Id do estoque: " +  dados.estoqueId + "<br>"
         res.innerHTML += "Id do Funcionário: " +  dados.funcionarioId + "<br>"
     })
@@ -56,11 +56,12 @@ listar.addEventListener('click', () => {
             res.innerHTML = "";
             dados.forEach(dado => {
                 res.innerHTML += "Código: " + dado.codEntrega + "<br>" + "Data: " + dado.dataEntrega +
-                 "<br>" + "produto: " + dado.nomeProdutoEntrega + "<br>" + "quantidade: " + dado.quantidadeEntrega + "<br>" 
-                 + "responsavel: " + dado.responsavelEntrega +"<br>" + "Id Estoque: " + dado.estoqueId +"<br>" + "Id funcionário: " + dado.funcionarioId + "<br>" + "<br>";
+                 "<br>" + "Produto: " + dado.nomeProdutoEntrega + "<br>" + "Quantidade: " + dado.quantidadeEntrega + "<br>" 
+                 + "Responsável: " + dado.responsavelEntrega +"<br>" + "Id Estoque: " + dado.estoqueId +"<br>" + "Id Funcionário: " + dado.funcionarioId + "<br>" + "<br>";
             });
+               
         })
-        .catch((err) => console.error("Falha ao listar todos os produtos", err));
+        .catch((err) => console.error("Falha ao listar todos os produtos!", err));
 
     document.getElementById('meu-formulario3').reset()
 });
@@ -73,8 +74,8 @@ buscar.addEventListener('click', () => {
         .then(resposta => resposta.json())
         .then(dado => {
             res.innerHTML += "Código: " + dado.codEntrega + "<br>" + "Data: " + dado.dataEntrega +
-                 "<br>" + "produto: " + dado.nomeProdutoEntrega + "<br>" + "quantidade: " + dado.quantidadeEntrega + "<br>" 
-                 + "responsavel: " + dado.responsavelEntrega +"<br>" + "Id Estoque: " + dado.estoqueId +"<br>" + "Id funcionário: " + dado.funcionarioId + "<br>" + "<br>";
+                 "<br>" + "Produto: " + dado.nomeProdutoEntrega + "<br>" + "Quantidade: " + dado.quantidadeEntrega + "<br>" 
+                 + "Responsável: " + dado.responsavelEntrega +"<br>" + "Id Estoque: " + dado.estoqueId +"<br>" + "Id Funcionário: " + dado.funcionarioId + "<br>" + "<br>";
         })
         .catch((err) => console.error("Falha ao tentar encontrar a entrega!", err))
     document.getElementById('meu-formulario').reset()

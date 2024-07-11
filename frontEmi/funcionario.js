@@ -34,8 +34,8 @@ gravar.addEventListener('click', () => {
         .then(dados => {
             res.innerHTML = "Funcionario foi cadastrado com sucesso! <br><br>"
 
-            res.innerHTML += "Código do funcionario: " + dados.codFuncionario + "<br>"
-            res.innerHTML += "Cargo do funcionario: " + dados.cargoFuncionario + "<br>"
+            res.innerHTML += "Código do funcionário: " + dados.codFuncionario + "<br>"
+            res.innerHTML += "Cargo do funcionário: " + dados.cargoFuncionario + "<br>"
             res.innerHTML += "CPF do fuuncionário: " + dados.cpfFuncionario + "<br>"
             res.innerHTML += "Nome do funcionário: " + dados.nomeFuncionario + "<br>"
             res.innerHTML += "Telefone do funcionário: " + dados.telefoneFuncionario + "<br>"
@@ -59,12 +59,12 @@ listar.addEventListener('click', () => {
                  "<br>" + "CPF: " + dado.cpfFuncionario + "<br>" + "Nome: " + dado.nomeFuncionario + "<br>" + "Telefone: " + dado.telefoneFuncionario +"<br>" + "Situação: " + dado.situacaoFuncionario +  "<br> <br>";
             });
         })
-        .catch((err) => console.error("Falha ao listar todos os produtos", err));
+        .catch((err) => console.error("Falha ao listar todos os funcionários!", err));
 
     document.getElementById('meu-formulario3').reset()
 });
 
-//buscacr---------------------------------------------------------------------------
+//buscar---------------------------------------------------------------------------
 buscar.addEventListener('click', () => {
     let codFuncionario = Number(document.getElementById('codFuncionario').value);
 
@@ -91,7 +91,7 @@ deletar.addEventListener('click', () => {
     })
         .then(resposta => resposta.text())
         .then(dados => {
-            res.innerHTML = "funcionário apagado com sucesso!"
+            res.innerHTML = "Funcionário apagado com sucesso!"
         })
         .catch((err) => console.error("Erro ao apagar o funcionário!", err))
 

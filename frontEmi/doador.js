@@ -37,14 +37,14 @@ gravar.addEventListener('click', ()=>{
     .then(dados => {
         res.innerHTML = " Doador cadastrado com sucesso! <br><br>"
         res.innerHTML += "Código do Doador: " + dados.codDoador + "<br>"
-        res.innerHTML += "nome do Doador: " + dados.nomeDoador + "<br>"
-        res.innerHTML += "cnpj do Doador: " + dados.cnpjDoador + "<br>"
-        res.innerHTML += "cpf do Doador: " + dados.cpfDoador + "<br>"
-        res.innerHTML += "endereço do Doador: " +  dados.enderecoDoador + "<br>"
-        res.innerHTML += "email do Doador: " +  dados.emailDoador + "<br>"
-        res.innerHTML += "telefone do Doador: " +  dados.telefoneDoador+ "<br>" 
-        res.innerHTML += "situação Doador: " +  dados.situacaoDoador + "<br>" 
-        res.innerHTML += "id do Funcionário: " +  dados.codFuncionario
+        res.innerHTML += "Nome do Doador: " + dados.nomeDoador + "<br>"
+        res.innerHTML += "CNPJ do Doador: " + dados.cnpjDoador + "<br>"
+        res.innerHTML += "CPF do Doador: " + dados.cpfDoador + "<br>"
+        res.innerHTML += "Endereço do Doador: " +  dados.enderecoDoador + "<br>"
+        res.innerHTML += "Email do Doador: " +  dados.emailDoador + "<br>"
+        res.innerHTML += "Telefone do Doador: " +  dados.telefoneDoador+ "<br>" 
+        res.innerHTML += "Situação Doador: " +  dados.situacaoDoador + "<br>" 
+        res.innerHTML += "Id do Funcionário: " +  dados.codFuncionario
         
         
     })
@@ -62,11 +62,11 @@ buscar.addEventListener('click', () => {
     fetch(`http://localhost:8080/doador/${codDoador}`)
         .then(resposta => resposta.json())
         .then(dados => {
-            res.innerHTML += "Código: " + dados.codDoador + "<br>" + "nome: " + dados.nomeDoador +"<br>"+
-      "CNPJ: " + dados.cnpjDoador + "<br>" +  "CPF: " + dados.cpfDoador  +
+            res.innerHTML += "Código: " + dados.codDoador + "<br>" + "Nome: " + dados.nomeDoador +"<br>"+
+            "CNPJ: " + dados.cnpjDoador + "<br>" +  "CPF: " + dados.cpfDoador  +
             "<br>" + "endereço: " +dados.enderecoDoador + "<br>" + "email: " + dados.emailDoador + "<br>" + "Telefone: " 
             + dados.telefoneDoador +"<br>" + "Situação: " + dados.situacaoDoador + 
-        "<br>" + "id Funcionário: " +dados.codFuncionario +  "<br> <br>"
+            "<br>" + "id Funcionário: " +dados.codFuncionario +  "<br> <br>"
         })
         .catch((err) => console.error("Falha ao tentar encontrar Doador!", err))
     document.getElementById('meu-formulario').reset()
@@ -83,7 +83,7 @@ listar.addEventListener('click', () => {
             dados.forEach(dados => {
                 res.innerHTML += "Código: " + dados.codDoador + "<br>" + "Nome: " + dados.nomeDoador +
               "<br> " + "CNPJ: " + dados.cnpjDoador + "<br>" + "CPF: " + dados.cpfDoador +
-                 "<br>" + "endereço: " + dados.enderecoDoador + "<br>" + "email: " + dados.emailDoador + "<br>" + 
+                 "<br>" + "Endereço: " + dados.enderecoDoador + "<br>" + "Email: " + dados.emailDoador + "<br>" + 
                  "Telefone: " +dados.telefoneDoador +"<br>" + "Situação: " + dados.situacaoDoador +  "<br> <br>";
             });
         })
@@ -128,7 +128,7 @@ atualizar.addEventListener('click', () => {
         .then(dados => {
             res.innerHTML = "Doador atualizado com sucesso!";
         })
-        .catch((err) => console.error("Falha ao atualizar o Doador", err))
+        .catch((err) => console.error("Falha ao atualizar o Doador!", err))
 });
 
 

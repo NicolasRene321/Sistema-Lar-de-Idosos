@@ -3,17 +3,21 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(8, 68, 87);
+    background-color: rgb(155, 236, 203);
     color: white;
     background-attachment: fixed;
     font-weight: bold;
     font-size: 1.5rem;
     text-align: center;
     width: 98vw;
+    background-image: url(devCare.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    
     
 }
 .container {
-    background-color:   rgb(10, 83, 105);
+    background-color:  #4a614b7e;
     border: 3px solid rgba(5, 20, 26, 0.459);
     border-radius: 20px;
     width: 600px;
