@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(8, 68, 87);
+    color: white;
+    background-attachment: fixed;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 98vw;
+    
+}
+.container {
+    background-color:   rgb(10, 83, 105);
+    border: 3px solid rgba(5, 20, 26, 0.459);
+    border-radius: 20px;
+    width: 600px;
+    padding-bottom: 20px;
+    margin-top: 140px;
+    
+}
+
+input, button {
+    background-color: rgba(255, 255, 255, 0.493);
+    color: white;
+    min-height: 40px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 12px;
+    text-align: center;
+}
+
+input::placeholder{
+    color: green;
+    text-align: center;
+}
+
