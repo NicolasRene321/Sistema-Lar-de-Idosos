@@ -40,7 +40,7 @@ gravar.addEventListener('click', ()=>{
         res.innerHTML += "Quantidade da entrega: " +  dados.quantidadeEntrega + "<br>"
         res.innerHTML += "Responsável pela entrega: " +  dados.responsavelEntrega + "<br>"
         res.innerHTML += "Id do estoque: " +  dados.estoqueId + "<br>"
-        res.innerHTML += "Id do Funcionário: " +  dados.funcionarioId + "<br>"
+        res.innerHTML += "Id do Funcionário: " +  dados.funcionarioId +"<br><hr>"
     })
     .catch((err) => console.error("Erro ao tentar cadastrar a entrega!", err))
 
@@ -57,7 +57,7 @@ listar.addEventListener('click', () => {
             dados.forEach(dado => {
                 res.innerHTML += "Código: " + dado.codEntrega + "<br>" + "Data: " + dado.dataEntrega +
                  "<br>" + "Produto: " + dado.nomeProdutoEntrega + "<br>" + "Quantidade: " + dado.quantidadeEntrega + "<br>" 
-                 + "Responsável: " + dado.responsavelEntrega +"<br>" + "Id Estoque: " + dado.estoqueId +"<br>" + "Id Funcionário: " + dado.funcionarioId + "<br>" + "<br>";
+                 + "Responsável: " + dado.responsavelEntrega +"<br>" + "Id Estoque: " + dado.estoqueId +"<br>" + "Id Funcionário: " + dado.funcionarioId + "<br>" + "<br><hr>";
             });
                
         })
@@ -75,7 +75,7 @@ buscar.addEventListener('click', () => {
         .then(dado => {
             res.innerHTML += "Código: " + dado.codEntrega + "<br>" + "Data: " + dado.dataEntrega +
                  "<br>" + "Produto: " + dado.nomeProdutoEntrega + "<br>" + "Quantidade: " + dado.quantidadeEntrega + "<br>" 
-                 + "Responsável: " + dado.responsavelEntrega +"<br>" + "Id Estoque: " + dado.estoqueId +"<br>" + "Id Funcionário: " + dado.funcionarioId + "<br>" + "<br>";
+                 + "Responsável: " + dado.responsavelEntrega +"<br>" + "Id Estoque: " + dado.estoqueId +"<br>" + "Id Funcionário: " + dado.funcionarioId + "<br>" + "<br><hr>";
         })
         .catch((err) => console.error("Falha ao tentar encontrar a entrega!", err))
     document.getElementById('meu-formulario').reset()

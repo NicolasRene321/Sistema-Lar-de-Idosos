@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -16,13 +20,19 @@ body {
     
     
 }
+
+.container button:first-child {
+    margin-top: 20px;
+    margin-left: 500px;
+}
+
 .container {
     background-color:  #4a614b7e;
     border: 3px solid rgba(5, 20, 26, 0.459);
     border-radius: 20px;
     width: 600px;
     padding-bottom: 20px;
-    margin-top: 140px;
+    margin-top: 120px;
     
 }
 
@@ -39,5 +49,18 @@ input, button {
 input::placeholder{
     color: green;
     text-align: center;
+}
+
+div#res {
+    margin-top: 20px;
+    background-color: #9FB79F;
+    color: black;
+    padding: 10px;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
 }
 

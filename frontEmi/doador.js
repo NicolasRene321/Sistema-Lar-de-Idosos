@@ -44,7 +44,7 @@ gravar.addEventListener('click', ()=>{
         res.innerHTML += "Email do Doador: " +  dados.emailDoador + "<br>"
         res.innerHTML += "Telefone do Doador: " +  dados.telefoneDoador+ "<br>" 
         res.innerHTML += "Situação Doador: " +  dados.situacaoDoador + "<br>" 
-        res.innerHTML += "Id do Funcionário: " +  dados.codFuncionario
+        res.innerHTML += "Id do Funcionário: " +  dados.codFuncionario + "<br><hr>"
         
         
     })
@@ -66,7 +66,7 @@ buscar.addEventListener('click', () => {
             "CNPJ: " + dados.cnpjDoador + "<br>" +  "CPF: " + dados.cpfDoador  +
             "<br>" + "endereço: " +dados.enderecoDoador + "<br>" + "email: " + dados.emailDoador + "<br>" + "Telefone: " 
             + dados.telefoneDoador +"<br>" + "Situação: " + dados.situacaoDoador + 
-            "<br>" + "id Funcionário: " +dados.codFuncionario +  "<br> <br>"
+            "<br>" + "id Funcionário: " +dados.codFuncionario +  "<br><hr>"
         })
         .catch((err) => console.error("Falha ao tentar encontrar Doador!", err))
     document.getElementById('meu-formulario').reset()
@@ -84,7 +84,7 @@ listar.addEventListener('click', () => {
                 res.innerHTML += "Código: " + dados.codDoador + "<br>" + "Nome: " + dados.nomeDoador +
               "<br> " + "CNPJ: " + dados.cnpjDoador + "<br>" + "CPF: " + dados.cpfDoador +
                  "<br>" + "Endereço: " + dados.enderecoDoador + "<br>" + "Email: " + dados.emailDoador + "<br>" + 
-                 "Telefone: " +dados.telefoneDoador +"<br>" + "Situação: " + dados.situacaoDoador +  "<br> <br>";
+                 "Telefone: " +dados.telefoneDoador +"<br>" + "Situação: " + dados.situacaoDoador +  "<br><hr>";
             });
         })
         .catch((err) => console.error("Falha ao listar todos os Doadores", err));

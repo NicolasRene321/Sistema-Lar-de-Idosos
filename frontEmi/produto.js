@@ -49,7 +49,7 @@ gravar.addEventListener('click', ()=>{
         res.innerHTML += "Doador ID: " +  dados.doadorId + "<br>"
         res.innerHTML += "Estoque ID: " +  dados.estoqueId + "<br>"
         res.innerHTML += "Fabricante ID: " +  dados.fabricanteId + "<br>"
-        res.innerHTML += "Funcionário ID: " +  dados.funcionarioId + "<br>"
+        res.innerHTML += "Funcionário ID: " +  dados.funcionarioId + "<br><hr>"
     })
     .catch((err) => console.error("Erro ao tentar cadastrar produto!", err))
 });
@@ -71,7 +71,7 @@ listar.addEventListener('click', () => {
                  + "Doador ID: " +  dado.doadorId + "<br>"
                  + "Estoque ID: " +  dado.estoqueId + "<br>"
                  + "Fabricante ID: " +  dado.fabricanteId + "<br>"
-                 + "Funcionário ID: " +  dado.funcionarioId + "<br>"});
+                 + "Funcionário ID: " +  dado.funcionarioId + "<br><hr>"});
         })
         .catch((err) => console.error("Falha ao listar todos os produtos!", err));
 

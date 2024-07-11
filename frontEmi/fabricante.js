@@ -28,7 +28,7 @@ gravar.addEventListener('click', ()=>{
         res.innerHTML = "Fabricante cadastrado com sucesso! <br><br>"
         res.innerHTML += "Código do Funcionário: " +  dados.codFuncionario + "<br>"
         res.innerHTML += "Nome do Fabricante: " +  dados.nomeFabricante + "<br>"
-        res.innerHTML += "Código Fabricante: " + dados.codFabricante + "<br>"
+        res.innerHTML += "Código Fabricante: " + dados.codFabricante + "<br><hr>"
     })
     .catch((err) => console.error("Erro ao tentar cadastrar o fabricante!", err))
 
@@ -43,7 +43,7 @@ listar.addEventListener('click', ()=>{
     .then(dados => {
         res.innerHTML = "";
         dados.forEach(dado => {
-            res.innerHTML += "Código: " + dado.codFabricante + "<br>" + "Nome: " + dado.nomeFabricante + "<br>" ; 
+            res.innerHTML += "Código: " + dado.codFabricante + "<br>" + "Nome: " + dado.nomeFabricante + "<br><hr>" ; 
         }); 
     })
     .catch((err) => console.error("Falha ao listar todos os fabricantes", err))
@@ -59,7 +59,7 @@ buscar.addEventListener('click', ()=>{
     fetch(`http://localhost:8080/fabricante/${codFabricante}`)
     .then(resposta => resposta.json())
     .then(dado => {
-        res.innerHTML += "Código: " + dado.codFabricante + "<br>" + "Nome: " + dado.nomeFabricante + "<br>" 
+        res.innerHTML += "Código: " + dado.codFabricante + "<br>" + "Nome: " + dado.nomeFabricante + "<br><hr>"
     })
     .catch((err) => console.error("Falha ao tentar encontrar o Fabricante!", err))
     
