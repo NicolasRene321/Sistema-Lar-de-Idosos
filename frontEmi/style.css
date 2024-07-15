@@ -36,6 +36,21 @@ body {
     
 }
 
+#container-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container-principal > button {
+    width: 290px;
+    cursor: pointer;
+}
+
+#container-principal > button:hover {
+    background-color: rgba(179, 155, 155, 0.493);   
+}
+
 input, button {
     background-color: rgba(255, 255, 255, 0.493);
     color: white;
